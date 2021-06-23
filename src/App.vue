@@ -44,7 +44,16 @@
   </div>
 
   <div class="w-full h-full relative">
-    <div class="w-full sticky top-0 p-2">
+
+    <div class="w-full sticky top-0 py-4 px-6 flex items-center justify-between">
+      <div class="flex items-center">
+        <button class="rounded-full bg-black w-7 h-7 m-3 text-white">
+          <img src="arrowLeft.png" style="filter: brightness(0) invert(1);">
+        </button>
+        <button class="rounded-full bg-black w-7 h-7 text-white">
+          <img src="arrowRight.png" class="ml-1" style="filter: brightness(0) invert(1);">
+        </button>
+      </div>
     </div>
   </div>
 </div>
