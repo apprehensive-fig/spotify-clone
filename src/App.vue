@@ -15,7 +15,11 @@
     <div class="mx-5">
       <h1 class="mb-3 text-xs text-lightest tracking-widest uppercase">Playlists</h1>
         <button class="flex items-center justify-start opacity-75 hover:opacity-100">
-          <img src="add.png" class="h-8 w-8 mr-3" style="filter: brightness(0) invert(1);"/>
+          <img src="add.png" class="h-8 w-8 mr-3 mb-2" style="filter: brightness(0) invert(1);"/>
+          <p class="text-sm text-white font-semibold">Create Playlist</p>
+        </button>
+        <button class="flex items-center justify-start opacity-75 hover:opacity-100">
+          <img src="liked.png" class="h-8 w-8 mr-3"/>
           <p class="text-sm text-white font-semibold">Create Playlist</p>
         </button>
       </div>
