@@ -22,6 +22,12 @@
           <img src="liked.png" class="h-8 w-8 mr-3"/>
           <p class="text-sm text-white font-semibold">Create Playlist</p>
         </button>
+        <div class="h-px w-full bg-light my-3"></div>
+      </div>
+      <div class="mx-5">
+        <div v-for="album in albums" v-bind:key="album" class="w-full h-24 overflow-y-scroll">
+          <p class="text-lightest hover:text-white text-xs py-1"></p>
+        </div>
       </div>
     </div>
     <div class="w-full h-full relative">
@@ -47,7 +53,15 @@ export default {
         {id: 'search', name: 'Search', icon: ''},
         {id: 'library', name: 'Your Library', icon: ''}
       ],
-      setID: 'home'
+      setID: 'home',
+      albums: [
+        {name: 'Starbucks Coffeehouse Radio'},
+        {name: '80s Hits'},
+        {name: 'Dance Pop Hits'},
+        {name: 'Early 2000s'},
+        {name: 'Backstreet Boys'},
+        {name: '90s Hits'}
+      ]
     }
   }
 }
