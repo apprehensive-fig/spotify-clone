@@ -43,7 +43,7 @@
     </div>
   </div>
 
-  <div class="w-full h-full relative">
+  <div class="w-full h-full relative bg-black">
 
     <div class="w-full sticky top-0 py-4 px-6 flex items-center justify-between">
       <div class="flex items-center">
@@ -54,6 +54,11 @@
           <img src="arrowRight.png" class="ml-1" style="filter: brightness(0) invert(1);">
         </button>
       </div>
+      <button class="bg-light rounded-full p-1 flex items-center">
+        <img src="avatar.jpg" class="rounded-full h-6 w-6 mr-1">
+        <p class="text-white font-semibold text-xs mr-3">Apprehensive Fig</p>
+        <img src="arrowDown.png" style="filter: brightness(0) invert(1);"/>
+      </button>
     </div>
   </div>
 </div>
