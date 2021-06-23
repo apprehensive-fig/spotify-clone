@@ -7,7 +7,7 @@
       <img src="spotifyLogo.png" class="h-10">
       </div>
       <div class="mx-2 mb-5">
-        <button v-for="page in pages" v-bind:key="page" @click="setID = page.id" :class="`w-full text-xs font-semibold rounded px-2 py-2 flex items-center justify-start ${setID === page.id ? 'bg-light text-white' : 'text-lightest'}`">
+        <button v-for="page in pages" v-bind:key="page" @click="setID = page.id" :class="`w-full focus:outline-none text-xs font-semibold rounded px-2 py-2 flex items-center justify-start ${setID === page.id ? 'bg-light text-white' : 'text-lightest'}`">
           <i class="material-icons ml-3"> {{page.icon}} </i>
           <p> {{ page.name }} </p>
         </button>
@@ -25,7 +25,7 @@
         <div class="h-px w-full bg-light my-3"></div>
       </div>
       <div class="mx-5">
-        <div class="w-full h-10 overflow-y-scroll">
+        <div class="w-full h-10">
           <p v-for="album in albums" v-bind:key="album" class="text-lightest hover:text-white text-xs py-1"> {{ album.name }} </p>
         </div>
         <button class="flex items-center justify-start text-lightest hover:text-light py-2">
@@ -33,13 +33,21 @@
           <p class="text-sm font-semibold">Install App</p>
         </button>
       </div>
-    </div>
-    <div class="w-full h-full relative">
-
-      <div class="w-full sticky top-0 p-2">
+      <div class="relative pt-4">
+        <div class="w-full h-full flex justify-end items-start opacity-20 hover:opacity-100 absolute">
+        <div class="bg-black rounded-full h-5 w-5 mr-2 mt-2">
+          <img src="down.png" style="filter: brightness(0) invert(1);">
+        </div>
       </div>
+      <img src="playing.jpeg"/>
     </div>
   </div>
+
+  <div class="w-full h-full relative">
+    <div class="w-full sticky top-0 p-2">
+    </div>
+  </div>
+</div>
 
   <div class="w-full bg-light" style="height: 12vh;">
   </div>
@@ -59,12 +67,7 @@ export default {
       ],
       setID: 'home',
       albums: [
-        {name: 'Starbucks Coffeehouse Radio'},
-        {name: '80s Hits'},
-        {name: 'Dance Pop Hits'},
-        {name: 'Early 2000s'},
-        {name: 'Backstreet Boys'},
-        {name: '90s Hits'}
+        {name: '80s Hits'}
       ]
     }
   }
