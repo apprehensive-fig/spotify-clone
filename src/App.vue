@@ -25,9 +25,13 @@
         <div class="h-px w-full bg-light my-3"></div>
       </div>
       <div class="mx-5">
-        <div v-for="album in albums" v-bind:key="album" class="w-full h-24 overflow-y-scroll">
-          <p class="text-lightest hover:text-white text-xs py-1"></p>
+        <div class="w-full h-10 overflow-y-scroll">
+          <p v-for="album in albums" v-bind:key="album" class="text-lightest hover:text-white text-xs py-1"> {{ album.name }} </p>
         </div>
+        <button class="flex items-center justify-start text-lightest hover:text-light py-2">
+          <img src="download.png" class="mr-3" style="filter: brightness(0) invert(1);"/>
+          <p class="text-sm font-semibold">Install App</p>
+        </button>
       </div>
     </div>
     <div class="w-full h-full relative">
