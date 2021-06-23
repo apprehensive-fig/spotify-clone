@@ -54,11 +54,17 @@
           <img src="arrowRight.png" class="ml-1" style="filter: brightness(0) invert(1);">
         </button>
       </div>
-      <button class="bg-light rounded-full p-1 flex items-center">
-        <img src="avatar.jpg" class="rounded-full h-6 w-6 mr-1">
-        <p class="text-white font-semibold text-xs mr-3">Apprehensive Fig</p>
-        <img src="arrowDown.png" style="filter: brightness(0) invert(1);"/>
-      </button>
+      <div class="relative">
+        <button class="bg-light rounded-full p-1 flex items-center">
+          <img src="avatar.jpg" class="rounded-full h-6 w-6 mr-1">
+          <p class="text-white font-semibold text-xs mr-3">Apprehensive Fig</p>
+          <img src="arrowDown.png" style="filter: brightness(0) invert(1);"/>
+        </button>
+        <div class="absolute bg-light w-full rounded mt-1">
+          <button class="w-full py-2 text-sm text-lightest hover text-white border-b border-white opacity-75 hover:opacity-100">Account</button>
+          <button class="w-full py-2 text-sm text-lightest hover text-white opacity-75 hover:opacity-100">Log Out</button>
+        </div>
+      </div>
     </div>
   </div>
 </div>
