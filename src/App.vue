@@ -34,7 +34,7 @@
       </div>
     </div>
   <!-- main content -->
-  <div class="w-full h-full relative bg-black overflow-y-scroll">
+  <div class="w-full h-full relative bg-black overflow-y-auto">
     <!-- header -->
     <div class="w-full sticky top-0 py-4 px-6 flex items-center justify-between bg-dark">
       <div class="flex items-center">
@@ -60,7 +60,7 @@
       </div>
     </div>
     <!-- cards -->
-    <div class="px-6 py-3">
+    <div class="px-8 py-3">
       <div class="flex items-center justify-between">
         <h1 class="pl-2 text-2xl font-semibold text-white tracking-wider hover:underline">Recently played</h1>
         <h2 class="pr-8 pt-4 text-xs text-lightest uppercase tracking-wider hover:underline mb-3">See all</h2>
@@ -72,7 +72,7 @@
               <img src="play.png" style="filter: brightness(0) invert(1);"/>
             </div>
           </div>
-          <div class="bg-light w-full h-auto p-5 rounded-lg shadow-md">
+          <div class="bg-dark w-full h-auto p-5 rounded-lg shadow-md">
             <img :src="`${ recent.src }`" class="h-auto w-full shadow mb-2"/>
             <h1 class="text-sm font-semibold text-white tracking wide">{{ recent.title }}</h1>
             <h2 class="text-xs text-lightest tracking-wider pb-5">{{ recent.artist }}</h2>
@@ -87,7 +87,7 @@
       </div>
       <div class="w-full flex flex-wrap">
         <div v-for="custom in customs" class="p-2 w-56">
-          <div class="bg-light w-full h-auto p-5 rounded-lg shadow-md">
+          <div class="bg-dark w-full h-auto p-5 rounded-lg shadow-md">
             <img :src="`${ custom.src }`" class="h-auto w-full shadow mb-2"/>
             <h1 class="text-sm font-semibold text-white tracking wide">{{ custom.title }}</h1>
             <h2 class="text-xs text-lightest tracking-wider pb-5">{{ custom.artist }}</h2>
@@ -128,12 +128,14 @@ export default {
         {src: '', title: '2000s Pop', artist: 'Moody Beats Records'},
         {src: '', title: 'All Out 80s', artist: 'Spotify'},
         {src: '', title: 'Liked Songs', artist: 'apprehensive-fig'},
+        {src: '', title: 'Lofi Fruits Music', artist: 'Moody Beats Records'}
       ],
       customs: [
         {src: '', title: 'Dance Pop Hits', artist: 'Spotify'},
         {src: '', title: '2000s Pop', artist: 'Moody Beats Records'},
         {src: '', title: 'All Out 80s', artist: 'Spotify'},
         {src: '', title: 'Liked Songs', artist: 'apprehensive-fig'},
+        {src: '', title: 'Lofi Fruits Music', artist: 'Moody Beats Records'}
       ],
     }
   }
