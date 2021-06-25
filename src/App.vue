@@ -36,13 +36,13 @@
   <!-- main content -->
   <div class="w-full h-full relative bg-black overflow-y-auto">
     <!-- header -->
-    <div class="header w-full sticky top-0 py-3 px-6 flex items-center justify-between bg-dark">
+    <div class="header w-full sticky top-0 py-3 px-6 flex items-center justify-between bg-light">
       <div class="flex items-center">
-        <button class="rounded-full bg-black w-5 h-5 m-3 text-white">
-          <img src="arrowLeft.png" style="filter: brightness(0) invert(1);">
+        <button class="rounded-full bg-black w-8 h-8 m-3 text-white">
+          <img src="arrowLeft.png" class="w-5 h-5 ml-1 opacity-60" style="filter: brightness(0) invert(1);">
         </button>
-        <button class="rounded-full bg-black w-5 h-5 text-white">
-          <img src="arrowRight.png" class="ml-1" style="filter: brightness(0) invert(1);">
+        <button class="rounded-full bg-black w-8 h-8 text-white">
+          <img src="arrowRight.png" class="w-5 h-5 ml-2 opacity-60" style="filter: brightness(0) invert(1);">
         </button>
       </div>
       <!-- dropdown -->
