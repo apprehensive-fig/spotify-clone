@@ -11,6 +11,7 @@
     "autoprefixer": "^9.8.6",
     "core-js": "^3.6.5",
     "material-design-icons": "^3.0.1",
+    "material-icons": "^0.7.4",
     "postcss": "^7.0.36",
     "tailwindcss": "npm:@tailwindcss/postcss7-compat@^2.2.2",
     "vue": "^2.6.11"

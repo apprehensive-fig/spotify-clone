@@ -36,7 +36,7 @@
   <!-- main content -->
   <div class="w-full h-full relative bg-black overflow-y-auto">
     <!-- header -->
-    <div class="w-full sticky top-0 py-3 px-6 flex items-center justify-between bg-dark">
+    <div class="header w-full sticky top-0 py-3 px-6 flex items-center justify-between bg-dark">
       <div class="flex items-center">
         <button class="rounded-full bg-black w-5 h-5 m-3 text-white">
           <img src="arrowLeft.png" style="filter: brightness(0) invert(1);">
@@ -58,7 +58,11 @@
           <img v-if="showDropdown === true"  @click="showDropdown = false" src="arrowUp.png" style="filter: brightness(0) invert(1);">
         </button>
         <div v-if="showDropdown === true" class="absolute bg-light w-auto rounded mt-1">
-          <button @click="showDropdown = false" class="focus:outline-none w-full py-2 text-xs text-lightest hover text-white px-5 border-b border-white opacity-75 hover:opacity-100">Account</button>
+          <button @click="showDropdown = false" class="focus:outline-none w-full py-2 text-xs text-lightest hover text-white px-5 opacity-75 hover:opacity-100">Account</button>
+          <button @click="showDropdown = false" class="focus:outline-none w-full py-2 text-xs text-lightest hover text-white px-5 opacity-75 hover:opacity-100">Profile</button>
+          <button @click="showDropdown = false" class="focus:outline-none w-full py-2 text-xs text-lightest hover text-white px-5 opacity-75 hover:opacity-100">Upgrade to Premium</button>
+          <button @click="showDropdown = false" class="focus:outline-none w-full py-2 text-xs text-lightest hover text-white px-5 opacity-75 hover:opacity-100">Prive sessions</button>
+          <button @click="showDropdown = false" class="focus:outline-none w-full py-2 text-xs text-lightest hover text-white px-5 border-b border-white opacity-75 hover:opacity-100">Settings</button>
           <button @click="showDropdown = false" class="focus:outline-none w-full py-2 text-xs text-lightest hover text-white opacity-75 hover:opacity-100">Log Out</button>
         </div>
       </div>
@@ -120,8 +124,29 @@
     </div>
   </div>
 </div>
-
-  <div class="w-full bg-light" style="height: 12vh;">
+<!-- playbar -->
+  <div class="w-full flex items-center justify-between px-3 bg-dark" style="height: 12vh;">
+    <div class="flex items-center">
+      <img src="heyJude.png" class="mt-5 mb-5 mr-3" style="height: 60px; width; 60px;">
+      <div>
+        <h1 class="text-sm text-white tracking-wide">Hey Jude</h1>
+        <h2 class="text-xs text-lightest tracking-wide">The Beatles</h2>
+      </div>
+      <img src="favorite.png" class="h-4 w-4 ml-3">
+    </div>
+    <div class="w-1/4 flex items-center justify-center mr-20 -ml-20">
+      <p class="text-xs text-lightest mr-1">0:52</p>
+      <div class="w-full h-1 bg-light rounded-full mt-4 flex items-center">
+        <div class="h-1 rounded-full bg-lightest" style="width: 18%">
+        </div>
+        <div class="h-3 w-3 bg-white rounded-full -ml-1 shadow">
+        </div>
+      </div>
+      <p class="text-xs text-lightest ml-1">3:58</p>
+    </div>
+    <div>
+      <p></p>
+    </div>
   </div>
 </div>
 </template>
