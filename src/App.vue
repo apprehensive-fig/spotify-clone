@@ -36,30 +36,53 @@
   <!-- main content -->
   <div class="w-full h-full relative bg-black overflow-y-auto">
     <!-- header -->
-    <div class="w-full sticky top-0 py-4 px-6 flex items-center justify-between bg-dark">
+    <div class="w-full sticky top-0 py-3 px-6 flex items-center justify-between bg-dark">
       <div class="flex items-center">
-        <button class="rounded-full bg-black w-7 h-7 m-3 text-white">
+        <button class="rounded-full bg-black w-5 h-5 m-3 text-white">
           <img src="arrowLeft.png" style="filter: brightness(0) invert(1);">
         </button>
-        <button class="rounded-full bg-black w-7 h-7 text-white">
+        <button class="rounded-full bg-black w-5 h-5 text-white">
           <img src="arrowRight.png" class="ml-1" style="filter: brightness(0) invert(1);">
         </button>
       </div>
       <!-- dropdown -->
-      <div class="relative">
+      <div class="relative flex row">
+        <button class="bg-light rounded-full p-1 border border-white flex items-center focus:outline-none mr-10">
+          <p class="text-white font-semibold text-xs px-5" style="letter-spacing: 2px">UPGRADE</p>
+        </button>
+        <div>
         <button class="bg-light rounded-full p-1 flex items-center focus:outline-none">
           <img src="avatar.jpg" class="rounded-full h-6 w-6 mr-1">
-          <p class="text-white font-semibold text-xs mr-3">Apprehensive Fig</p>
+          <p class="text-white font-semibold text-xs mr-3" style="letter-spacing: 1px">app-fig</p>
           <img v-if="showDropdown === false"  @click="showDropdown = true" src="arrowDown.png" style="filter: brightness(0) invert(1);">
           <img v-if="showDropdown === true"  @click="showDropdown = false" src="arrowUp.png" style="filter: brightness(0) invert(1);">
         </button>
-        <div v-if="showDropdown === true" class="absolute bg-light w-full rounded mt-1">
-          <button @click="showDropdown = false" class="focus:outline-none w-full py-2 text-xs text-lightest hover text-white border-b border-white opacity-75 hover:opacity-100">Account</button>
+        <div v-if="showDropdown === true" class="absolute bg-light w-auto rounded mt-1">
+          <button @click="showDropdown = false" class="focus:outline-none w-full py-2 text-xs text-lightest hover text-white px-5 border-b border-white opacity-75 hover:opacity-100">Account</button>
           <button @click="showDropdown = false" class="focus:outline-none w-full py-2 text-xs text-lightest hover text-white opacity-75 hover:opacity-100">Log Out</button>
         </div>
       </div>
+      </div>
     </div>
     <!-- cards -->
+    <div class="px-8 py-3">
+      <div class="flex items-center">
+        <h1 class="pl-2 text-3xl mb-5 font-semibold text-white tracking-wider hover:underline">Good morning</h1>
+      </div>
+      <div class="w-full flex flex-wrap">
+        <div v-for="suggestion in suggestions" class="p-2 h-30 relative" style="width: 350px;">
+          <div class="absolute w-full h-full flex items-end justify-end p-8">
+            <div class="bg-green rounded-full h-10 w-10 flex items-center justify-center opacity-0 hover:opacity-100">
+              <img src="play.png" style="filter: brightness(0) invert(1);"/>
+            </div>
+          </div>
+          <div class="bg-light flex items-center w-full h-auto rounded-md shadow-md">
+            <img :src="`${ suggestion.src }`" class="w-20 h-auto shadow mr-3"/>
+            <h1 class="text-sm font-semibold text-white tracking wide">{{ suggestion.title }}</h1>
+          </div>
+        </div>
+      </div>
+    </div>
     <div class="px-8 py-3">
       <div class="flex items-center justify-between">
         <h1 class="pl-2 text-2xl font-semibold text-white tracking-wider hover:underline">Recently played</h1>
@@ -123,6 +146,14 @@ export default {
         {name: 'Lofi Fruits Music'}
       ],
       showDropdown: false,
+      suggestions: [
+        {src: 'playlistDance.png', title: 'Dance Pop Hits', artist: 'Spotify'},
+        {src: 'playlist2000.png', title: '2000s Mix', artist: 'Spotify'},
+        {src: 'playlist80s.png', title: 'All Out 80s', artist: 'Spotify'},
+        {src: 'playlistLiked.png', title: 'Liked Songs', artist: 'apprehensive-fig'},
+        {src: 'playlistLofi.png', title: 'Lofi Fruits Music', artist: 'Moody Beats Records'},
+        {src: 'playlistWeekly.png', title: 'Discover Weekly', artist: 'Your weekly mixtape of fresh music. Enjoy new...'}
+      ],
       recents: [
         {src: 'playlistDance.png', title: 'Dance Pop Hits', artist: 'Spotify'},
         {src: 'playlist2000.png', title: '2000s Mix', artist: 'Spotify'},
