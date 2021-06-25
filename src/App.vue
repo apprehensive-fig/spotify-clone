@@ -13,8 +13,8 @@
         </div>
       <div class="mx-5">
         <h1 class="mb-3 text-xs text-lightest tracking-widest uppercase">Playlists</h1>
-          <button class="flex items-center justify-start opacity-75 hover:opacity-100">
-            <img src="add.png" class="h-8 w-8 mr-3 mb-2" style="filter: brightness(0) invert(1);"/>
+          <button class="flex items-center justify-start opacity-75 mb-2 hover:opacity-100">
+            <img src="add.png" class="h-8 w-8 mr-3" style="filter: brightness(0) invert(1);"/>
             <p class="text-sm text-white font-semibold">Create Playlist</p>
           </button>
           <button class="flex items-center justify-start opacity-75 hover:opacity-100">
@@ -134,18 +134,27 @@
       </div>
       <img src="favorite.png" class="h-4 w-4 ml-3">
     </div>
-    <div class="w-1/4 flex items-center justify-center mr-20 -ml-20">
-      <p class="text-xs text-lightest mr-1">0:52</p>
-      <div class="w-full h-1 bg-light rounded-full mt-4 flex items-center">
-        <div class="h-1 rounded-full bg-lightest" style="width: 18%">
-        </div>
-        <div class="h-3 w-3 bg-white rounded-full -ml-1 shadow">
-        </div>
-      </div>
-      <p class="text-xs text-lightest ml-1">3:58</p>
-    </div>
+    <div class="flex flex-col justify-center items-center w-1/3">
     <div>
-      <p></p>
+      <button @click.prevent="playSong('heyJude.mp3'), pause = true">
+        <img v-if="pause == false" src="playButton.png" class="h-7 w-7 focus:outline-none">
+      </button>
+      <button>
+        <img v-if="pause === true" src="pauseButton.png" class="h-7 w-7 focus:outline-none">
+      </button>
+    </div>
+      <div class="w-3/4 flex items-center justify-center">
+        <p class="text-xs text-lightest mr-1">0:52</p>
+        <div class="w-full h-1 bg-light rounded-full mt-4 flex items-center">
+          <div class="h-1 rounded-full bg-lightest" style="width: 18%">
+          </div>
+          <div class="h-3 w-3 bg-white rounded-full -ml-1 shadow">
+          </div>
+        </div>
+        <p class="text-xs text-lightest ml-1">3:58</p>
+      </div>
+    </div>
+    <div class="w-1/4">
     </div>
   </div>
 </div>
@@ -193,9 +202,21 @@ export default {
         {src: 'playlistMix6.png', title: 'Daily Mix 6', artist: 'Eminem, Mooski, The Weekend and more'},
         {src: 'playlistWeekly.png', title: 'Discover Weekly', artist: 'Your weekly mixtape of fresh music. Enjoy new...'}
       ],
+      pause: false,
+    };
+  },
+methods: {
+    playSong(song) {
+      if(song){
+        var audio = new Audio(song);
+        audio.play();
+        }
+      },
+    pauseSong(song) {
+        audio.pause();
     }
   }
-}
+};
 
 </script>
 <style>
