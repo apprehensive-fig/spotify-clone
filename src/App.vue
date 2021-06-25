@@ -54,8 +54,8 @@
           <img v-if="showDropdown === true"  @click="showDropdown = false" src="arrowUp.png" style="filter: brightness(0) invert(1);">
         </button>
         <div v-if="showDropdown === true" class="absolute bg-light w-full rounded mt-1">
-          <button @click="showDropdown = false" class="focus:outline-none w-full py-2 text-sm text-lightest hover text-white border-b border-white opacity-75 hover:opacity-100">Account</button>
-          <button @click="showDropdown = false" class="focus:outline-none w-full py-2 text-sm text-lightest hover text-white opacity-75 hover:opacity-100">Log Out</button>
+          <button @click="showDropdown = false" class="focus:outline-none w-full py-2 text-xs text-lightest hover text-white border-b border-white opacity-75 hover:opacity-100">Account</button>
+          <button @click="showDropdown = false" class="focus:outline-none w-full py-2 text-xs text-lightest hover text-white opacity-75 hover:opacity-100">Log Out</button>
         </div>
       </div>
     </div>
@@ -124,18 +124,18 @@ export default {
       ],
       showDropdown: false,
       recents: [
-        {src: '', title: 'Dance Pop Hits', artist: 'Spotify'},
-        {src: '', title: '2000s Pop', artist: 'Moody Beats Records'},
-        {src: '', title: 'All Out 80s', artist: 'Spotify'},
-        {src: '', title: 'Liked Songs', artist: 'apprehensive-fig'},
-        {src: '', title: 'Lofi Fruits Music', artist: 'Moody Beats Records'}
+        {src: 'playlistDance.png', title: 'Dance Pop Hits', artist: 'Spotify'},
+        {src: 'playlist2000.png', title: '2000s Mix', artist: 'Spotify'},
+        {src: 'playlist80s.png', title: 'All Out 80s', artist: 'Spotify'},
+        {src: 'playlistLiked.png', title: 'Liked Songs', artist: 'apprehensive-fig'},
+        {src: 'playlistLofi.png', title: 'Lofi Fruits Music', artist: 'Moody Beats Records'}
       ],
       customs: [
-        {src: '', title: 'Dance Pop Hits', artist: 'Spotify'},
-        {src: '', title: '2000s Pop', artist: 'Moody Beats Records'},
-        {src: '', title: 'All Out 80s', artist: 'Spotify'},
-        {src: '', title: 'Liked Songs', artist: 'apprehensive-fig'},
-        {src: '', title: 'Lofi Fruits Music', artist: 'Moody Beats Records'}
+        {src: 'playlistRadar.png', title: 'Release Radar', artist: 'Catch all the latest music from artists you follow...'},
+        {src: 'playlistMix3.png', title: 'Daily Mix 3', artist: 'Lady Gaga, Justin Bieber, Lauv and more'},
+        {src: 'playlistMix4.png', title: 'Daily Mix 4', artist: 'Bleachers, Two Door Cinema Club, PNAU an...'},
+        {src: 'playlistMix6.png', title: 'Daily Mix 6', artist: 'Eminem, Mooski, The Weekend and more'},
+        {src: 'playlistWeekly.png', title: 'Discover Weekly', artist: 'Your weekly mixtape of fresh music. Enjoy new...'}
       ],
     }
   }
